@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>listsave</title>
+    <script src="eel.js"></script>
+    <style media="screen">
+      *{
+        margin:0px;
+        padding:0px;
+      }
+      header{
+        background:green;
+        /* float:left; */
+        cursor:default;
+      }
+      header ol{
+
+        text-align:center;
+        list-style:none;
+      }
+      header ol li{
+        background:grey;
+        padding:1%;
+      }
+
+      #toplist{
+        width:100%;
+        min-height:400px;
+        display:block;
+        background:darkgrey;
+        float:left;
+      }
+
+      .list{
+        width:79%;
+        hight:1px;
+        margin-top:5%;
+        margin-left:9%;
+        padding:1%;
+        background:silver;
+      }
+      .list input{
+        width:85%;
+      }
+      .list text{
+        width:85%;
+        /* background:green; */
+        display:none;
+        overflow:scroll-vertical;
+      }
+
+      footer{
+        text-align:center;
+        cursor:default;
+      }
+    </style>
+    <script type="text/javascript">
+      var i = 0;
+      function create() {
+        i+=1;
+        // alert("create")
+        var ndiv = document.createElement("div")
+        // alert("create div")
+        // div.className = "alert";
+        // div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+        ndiv.className = 'list'
+        // alert("create class")
+        ndiv.id = 'list'+i
+        // alert("create id")
+        ndiv.innerHTML = '<text id="text'+i+'"></text><input id="text'+i+'in" type="text" name="" value=""><button id="button'+i+'" type="button" name="button" onclick="save(\'text'+i+'\',\'text'+i+'in\',\'button'+i+'\',\'button_'+i+'\')">save</button><button onclick="del(\'list'+i+'\')" id=\'button_'+i+'\'style="display:none; text-align:right;"type="button" name="button">delete</button>'
+        // alert("create innerHTML")
+        document.getElementById("toplist").appendChild(ndiv)
+        // alert("create append")
+      }
+      // .removeChild
+      function save(arg,arg2,but,but_) {
+        // alert(arg)
+        // alert(document.getElementById(arg2).value)
+        document.getElementById(arg).style.display = "inline-block"
+        document.getElementById(arg).innerHTML = document.getElementById(arg2).value
+        document.getElementById(arg2).style.display = "none"
+        document.getElementById(but).style.display = "none"
+        document.getElementById(but_).style.display = "inline"
+      }
+      function del(arg) {
+        // alert(arg)
+        document.getElementById(arg).remove(arg)
+      }
+    </script>
+  </head>
+  <body>
+    <div id="window">
+      <header>
+        <ol>
+          <li onclick="create()">создать</li>
+        </ol>
+      </header>
+      <div id="toplist">
+        <!-- <div id="list1" class="list">
+          <text id="text1"></text><input id="text1in" type="text" name="" value="">
+          <button id="button1" type="button" name="button" onclick="save('text1','text1in','button1','button_1')">save</button>
+          <button onclick="del('list1')" id="button_1"style="display:none; text-align:right;"type="button" name="button">delete</button>
+        </div>
+        <div id="list2" class="list">
+          <text id="text2"></text><input id="text2in" type="text" name="" value="">
+          <button id="button2" type="button" name="button" onclick="save('text2','text2in','button2','button_2')">save</button>
+          <button onclick="del('list2')" id="button_2"style="display:none; text-align:right;"type="button" name="button">delete</button>
+        </div> -->
+      </div>
+      <footer onclick="this.innerHTML='кнопка не работает'">
+        сохранить
+      </footer>
+    </div>
+  </body>
+</html>
