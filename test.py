@@ -35,7 +35,7 @@ def openpy():
         if text[number] != '':
             te = text[number].split(":")
             eel.createjs(number,te[1])
-        print(te[1])
+            print(te[1])
     # print(ar[0])
     # print(f)
 

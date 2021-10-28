@@ -1,0 +1,60 @@
+  *{
+    margin:0px;
+    padding:0px;
+  }
+  body{
+    background:darkgrey;
+  }
+  header{
+    background:green;
+    /* float:left; */
+    cursor:default;
+  }
+  header ol{
+    text-align:center;
+    list-style:none;
+  }
+  header ol li{
+    background:grey;
+    padding:1%;
+  }
+
+  #toplist{
+    width:100%;
+    min-height:400px;
+    display:block;
+    background:darkgrey;
+    float:left;
+  }
+
+  .list{
+    width:79%;
+    /* height:1px; */
+    margin-top:5%;
+    margin-left:9%;
+    padding:1%;
+    background:silver;
+  }
+  .list input{
+    width:100%;
+    text-align:center;
+  }
+  .list text{
+    width:100%;
+    /* background:green; */
+    display:none;
+    overflow:scroll-vertical;
+    text-align:center;
+  }
+
+  .list button{
+    width:100%;
+    height:25px;
+    text-align: center;
+    background:silver;
+    padding:1%;
+  }
+  footer{
+    text-align:center;
+    cursor:default;
+  }
