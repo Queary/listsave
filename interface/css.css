@@ -27,9 +27,27 @@
     float:left;
   }
 
+  #setting{
+    width:100%;
+    min-height:400px;
+    display:block;
+    background:darkgrey;
+    float:left;
+  }
+
+  #save{
+    width:100%;
+    height:25px;
+    position:fixed;
+    bottom:0px;
+    text-align:center;
+    background:#919191;
+    cursor:default;
+  }
+
   .list{
     width:79%;
-    /* height:1px; */
+    min-height:1px;
     margin-top:5%;
     margin-left:9%;
     padding:1%;
@@ -55,6 +73,11 @@
     padding:1%;
   }
   footer{
+    width:100%;
+    height:25px;
+    position:fixed;
+    bottom:0;
     text-align:center;
     cursor:default;
+    background:#919191;
   }

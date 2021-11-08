@@ -10,9 +10,9 @@
   </head>
   <body>
     <div id="window">
-      <header>
+      <header id="header">
         <ol>
-          <li onclick="create()">создать</li>
+          <li id="button_create" onclick="create()">создать</li>
         </ol>
       </header>
       <div id="toplist">
@@ -27,9 +27,23 @@
           <button onclick="del('list2')" id="button_2"style="display:none; text-align:right;"type="button" name="button">delete</button>
         </div> -->
       </div>
-      <!-- <footer onclick="this.innerHTML='кнопка не работает';eel.openpy()">
-        сохранить
-      </footer> -->
+      <div style="display:none;" id="setting">
+        <div id="label_setting" style="margin-top:0px;margin-left:0px;width:98%;text-align:center;" class="list">
+          Настройки
+        </div>
+        <div class="list">
+          сменить язык:<select id="lang"class="" name="" value="ru">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div onclick="save_setting()" id="save">
+          Сохранить
+        </div>
+      </div>
+      <footer id="footer" onclick="setting_swith()">
+        Настройки
+      </footer>
     </div>
   </body>
 </html>
